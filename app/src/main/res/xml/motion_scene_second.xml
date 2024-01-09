@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools">
+
+    <Transition
+        motion:autoTransition="animateToEnd"
+        motion:constraintSetStart="@+id/start"
+        app:duration="20000"
+        motion:constraintSetEnd="@+id/end">
+
+<!--        <OnSwipe-->
+<!--            motion:touchAnchorId="@id/motionLayout"-->
+<!--            motion:touchAnchorSide="bottom"-->
+<!--            motion:dragDirection="dragUp"-->
+<!--            motion:moveWhenScrollAtTop="true"/>-->
+
+    </Transition>xxxxx
+
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint
+            android:id="@+id/imageView"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toTopOf="@+id/motionLayout"/>
+
+        <Constraint
+            android:id="@+id/button"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/motionLayout"/>
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+
+        <Constraint
+            android:id="@+id/imageView"
+            app:layout_constraintTop_toTopOf="@+id/motionLayout"
+            app:layout_constraintBottom_toBottomOf="@+id/motionLayout"/>
+
+        <Constraint
+            android:id="@+id/button"
+            app:layout_constraintBottom_toTopOf="@+id/textView1"/>
+
+    </ConstraintSet>
+
+</MotionScene>
